@@ -1,0 +1,17 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "Hanzo Calculator Automation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jhonattan Gomes",
+  "license": "ISC",
+  "dependencies": {
+    "appium": "^2.0.1"
+  },
+  "devDependencies": {
+    "appium-uiautomator2-driver": "^3.5.2"
+  }
+}
