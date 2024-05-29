@@ -1,5 +1,7 @@
 # Project Execution mobile-tests-alelo
 
+https://github.com/hyggedigitaltecnologia/mobile-tests-hanzo/assets/104523199/668f29b6-8181-4cd4-b868-8e7de24fd3d8
+
 # How to run
 
 1. Open a terminal in the project root.
