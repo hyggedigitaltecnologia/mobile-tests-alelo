@@ -4,3 +4,7 @@
 # Author: Jhonattan Gomes
 # Description: Tests regarding the multiply component
 ##################################################################################################################################
+
+*** Settings ***
+
+Resource    ../../../helpers/dependencies.robot

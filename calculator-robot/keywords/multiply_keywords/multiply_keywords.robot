@@ -4,3 +4,7 @@
 # Autor: Jhonattan Gomes
 # Decrição: Keywords referring to the multiply component
 ##################################################################################################################################
+
+*** Settings ***
+
+Resource    ../../helpers/dependencies.robot

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-05-29T00:10:10.373048" rpa="false" schemaversion="5">
+<suite id="s1" name="Controller" source="C:\Automacao\Hanzo\mobile-tests-hanzo\calculator-robot\controller.robot">
+<test id="s1-t1" name="Test Cases" line="21">
+<kw name="Run Tests" owner="dependencies">
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2024-05-29T00:10:10.891159" level="INFO">${date} = 29052024001010</msg>
+<var>${date}</var>
+<arg>result_format=%d%m%Y%H%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2024-05-29T00:10:10.891159" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-29T00:10:10.892159" level="INFO">${cmd} = robot --listener allure_robotframework -i successful_operation -d ./results -x output-xunit.xml components/sum/tests/sum_tests.robot</msg>
+<var>${cmd}</var>
+<arg>robot --listener allure_robotframework -i ${tag} -d ./results -x output-xunit.xml components/${component}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-29T00:10:10.891159" elapsed="0.001000"/>
+</kw>
+<kw name="Run Command Lines" owner="command">
+<msg time="2024-05-29T00:10:18.900381" level="INFO">0</msg>
+<arg>${cmd}</arg>
+<status status="PASS" start="2024-05-29T00:10:10.892159" elapsed="8.008222"/>
+</kw>
+<arg>${COMPONENT}</arg>
+<arg>${TAG}</arg>
+<doc>Manages the execution of automated tests</doc>
+<status status="PASS" start="2024-05-29T00:10:10.890160" elapsed="8.010221"/>
+</kw>
+<kw name="Close Application" owner="AppiumLibrary" type="TEARDOWN">
+<kw name="Capture Page Screenshot" owner="AppiumLibrary">
+<msg time="2024-05-29T00:10:18.901575" level="FAIL">No application is open</msg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="FAIL" start="2024-05-29T00:10:18.901575" elapsed="0.001517">No application is open</status>
+</kw>
+<msg time="2024-05-29T00:10:18.904083" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg time="2024-05-29T00:10:18.905083" level="FAIL">No application is open</msg>
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="FAIL" start="2024-05-29T00:10:18.900381" elapsed="0.004773">No application is open</status>
+</kw>
+<status status="FAIL" start="2024-05-29T00:10:10.889167" elapsed="8.016491">Teardown failed:
+No application is open</status>
+</test>
+<status status="FAIL" start="2024-05-29T00:10:10.374045" elapsed="8.532134"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Controller">Controller</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-05-29T00:10:10.882638" level="ERROR">Error in file 'C:\Automacao\Hanzo\mobile-tests-hanzo\calculator-robot\helpers\dependencies.robot' on line 20: Error in file 'C:\Automacao\Hanzo\mobile-tests-hanzo\calculator-robot\components\sum\tests\sum_tests.robot' on line 12: Resource file with 'Test Cases' section is invalid.</msg>
+<msg time="2024-05-29T00:10:18.904083" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+</errors>
+</robot>

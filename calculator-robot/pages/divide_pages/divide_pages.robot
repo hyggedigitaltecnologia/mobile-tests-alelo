@@ -4,3 +4,7 @@
 # Author: Jhonattan Gomes
 # Description: Pages referring to the divide component
 ##################################################################################################################################
+
+*** Settings ***
+
+Resource    ../../helpers/dependencies.robot
