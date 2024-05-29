@@ -9,14 +9,14 @@
 
 Library     Collections
 Library     Process
-Library     OperatingSystem 
-Library     SeleniumLibrary
+Library     OperatingSystem
+# Library     SeleniumLibrary
 Library     String
 Library     DateTime
 Library     FakerLibrary    locale=pt_BR
 Library     BuiltIn
 Library     XML
-Library     
+Library     AppiumLibrary
 
 ### Bibliotecas personalizadas
 

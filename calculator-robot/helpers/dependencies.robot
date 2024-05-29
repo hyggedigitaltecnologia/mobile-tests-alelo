@@ -14,18 +14,25 @@ Resource    custom_keywords.robot
 
 ### Components ###
 
-Resource    ../components/my_account/tests/my_account_tests.robot
+Resource    ../components/divide/tests/divide_tests.robot
+Resource    ../components/multiply/tests/multiply_tests.robot
+Resource    ../components/subtract/tests/subtract_tests.robot
+Resource    ../components/sum/tests/sum_tests.robot
 
 ### Keywords ###
 
 Resource    ../keywords/global_keywords/global_keywords.robot
-Resource    ../keywords/my_account_keywords/my_account_keywords.robot
-Resource    ../keywords/home_keywords/home_keywords.robot
+Resource    ../keywords/divide_keywords/divide_keywords.robot
+Resource    ../keywords/multiply_keywords/multiply_keywords.robot
+Resource    ../keywords/subtract_keywords/subtract_keywords.robot
+Resource    ../keywords/sum_keywords/sum_keywords.robot
 
 ### Pageobjects ###
 
-Resource    ../pages/my_account_pages/my_account_pages.robot
-Resource    ../pages/home_pages/home_pages.robot
+Resource    ../pages/divide_pages/divide_pages.robot
+Resource    ../pages/multiply_pages/multiply_pages.robot
+Resource    ../pages/subtract_pages/subtract_pages.robot
+Resource    ../pages/sum_pages/sum_pages.robot
 
 *** Variables ***
 
@@ -53,7 +60,7 @@ New Data
     ${new_country}         FakerLibrary.Country
     ${new_date}            FakerLibrary.Date Time This Month
 
-    &{new}     Create Dictionary 
+    &{new}     Create Dictionary
     ...        new_name=${new_name}
     ...        las_tname=${new_last_name}
     ...        new_user=${new_user}
@@ -74,8 +81,8 @@ New Data
 
 Run Tests
     [Documentation]    Manages the execution of automated tests
-    [Arguments]    ${component}    ${tag}    ${browser}
+    [Arguments]    ${component}    ${tag}
 
     ${date}    Get Current Date    result_format=%d%m%Y%H%M%S
-    ${cmd}    Set Variable    robot --listener allure_robotframework -i ${tag} -d ./results -x output-xunit.xml --variable BROWSER:${browser} components/${component}
+    ${cmd}    Set Variable    robot --listener allure_robotframework -i ${tag} -d ./results -x output-xunit.xml components/${component}
     Run Command Lines    ${cmd}

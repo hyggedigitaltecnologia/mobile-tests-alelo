@@ -9,15 +9,14 @@
 
 Resource    helpers/dependencies.robot
 
-Test Teardown    Close Browser
+Test Teardown    Close Application
 
 *** Variables ***
 
-${COMPONENT}    component
+${COMPONENT}     component
 ${TAG}           tag
-${BROWSER}       browser         
 
 *** Test Cases ***
 
 Test Cases
-    Run Tests    ${COMPONENT}    ${TAG}    ${BROWSER}
+    Run Tests    ${COMPONENT}    ${TAG}
