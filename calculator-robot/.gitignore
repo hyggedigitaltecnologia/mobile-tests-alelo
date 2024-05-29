@@ -8,3 +8,5 @@ results
 output
 allure-report
 csv
+*.html
+*.xml
